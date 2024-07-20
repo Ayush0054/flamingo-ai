@@ -1,6 +1,6 @@
-## flamingo-ai
+# Flamingo AI
 
-# tech stack
+## Tech Stack
 
 - Nextjs
 - Shadcn ui
