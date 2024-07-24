@@ -9,7 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { SearchIcon, SendIcon } from "lucide-react";
-import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { useChat } from "ai/react";
 import { Input } from "../ui/input";
 export default function ChatScreen() {
@@ -50,7 +50,7 @@ export default function ChatScreen() {
               {message.role !== "user" && (
                 <Avatar className="h-10 w-10 border">
                   <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback>{message.role}</AvatarFallback>
+                  <AvatarFallback>{message.role[0]}</AvatarFallback>
                 </Avatar>
               )}
               <div className="grid gap-1.5">
@@ -61,14 +61,16 @@ export default function ChatScreen() {
                       : "bg-muted"
                   } p-3 text-sm`}
                 >
-                  <p>{message.content}</p>
+                  <ReactMarkdown className="markdown ">
+                    {message.content}
+                  </ReactMarkdown>
                 </div>
                 <div className="text-xs text-muted-foreground"></div>
               </div>
               {message.role === "user" && (
                 <Avatar className="h-10 w-10 border">
                   <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback>{message.role}</AvatarFallback>
+                  <AvatarFallback>{message.role[0]}</AvatarFallback>
                 </Avatar>
               )}
             </div>
