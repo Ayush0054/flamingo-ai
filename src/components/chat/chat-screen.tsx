@@ -8,10 +8,22 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { SearchIcon, SendIcon } from "lucide-react";
+import { Cross, SearchIcon, SendIcon, X } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { useChat } from "ai/react";
 import { Input } from "../ui/input";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import FileUpload from "./file-upload";
 export default function ChatScreen() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
@@ -78,14 +90,30 @@ export default function ChatScreen() {
         </div>
       </div>
       <div className="border-t px-4 py-2">
-        <form onSubmit={handleSubmit} className="relative">
+        <form
+          onSubmit={handleSubmit}
+          className=" relative flex items-center gap-2"
+        >
           {/* <input
             className="fixed bottom-0 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
             value={input}
             placeholder="Say something..."
             onChange={handleInputChange}
           /> */}
-
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="outline">Upload Context</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <div className=" grid justify-items-end">
+                <AlertDialogCancel className=" p-0 m-0 border-none">
+                  {" "}
+                  <X />
+                </AlertDialogCancel>
+              </div>
+              <FileUpload />
+            </AlertDialogContent>
+          </AlertDialog>
           <Input
             placeholder="Type your message..."
             className="min-h-[48px] w-full rounded-2xl resize-none p-4 pr-16 text-sm"
@@ -95,7 +123,7 @@ export default function ChatScreen() {
           <Button
             type="button"
             size="icon"
-            className="absolute right-3 top-3"
+            className="absolute right-3 top-1"
             onClick={handleSubmit}
           >
             <SendIcon className="h-4 w-4" />
