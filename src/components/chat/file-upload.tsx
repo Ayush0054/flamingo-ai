@@ -14,10 +14,13 @@ const FileUpload = () => {
       file_key: string;
       file_name: string;
     }) => {
-      const response = await axios.post("/api/create-chat", {
-        file_key,
-        file_name,
-      });
+      const response = await axios.post(
+        "http://localhost:3000/api/create-chat",
+        {
+          file_key,
+          file_name,
+        }
+      );
       return response.data;
     },
   });
@@ -27,7 +30,7 @@ const FileUpload = () => {
       //   "image/png": [".png"],
       //   "image/jpeg": [".jpg", ".jpeg"],
     },
-    maxFiles: 1,
+    maxFiles: 5,
     onDrop: async (acceptedFiles) => {
       console.log(acceptedFiles);
       const file = acceptedFiles[0];
