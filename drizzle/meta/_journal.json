@@ -1,0 +1,76 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1725816476421,
+      "tag": "0000_even_terror",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1725820180778,
+      "tag": "0001_dapper_hairball",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1725822927321,
+      "tag": "0002_plain_rhodey",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1725823076696,
+      "tag": "0003_dizzy_ink",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1725823343713,
+      "tag": "0004_happy_quicksilver",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1725824176534,
+      "tag": "0005_sturdy_mysterio",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1725824391687,
+      "tag": "0006_spotty_diamondback",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1725824678744,
+      "tag": "0007_strange_nehzno",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1725824782489,
+      "tag": "0008_melted_psynapse",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1725824979176,
+      "tag": "0009_wise_power_man",
+      "breakpoints": true
+    }
+  ]
+}

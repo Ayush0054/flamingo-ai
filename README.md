@@ -9,10 +9,5 @@
 - react Query
 - Next Auth
 - S3 bucket
-- BullMq worker
-- Lemonsquezy
-- Open Ai
-- Vercel ai sdk
-- LangchainJs
-- Redis
-- Docker
+
+## Not working on this anymore , it was just useless idea

@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { Search, FileText, ChevronLeft, PlusCircle } from "lucide-react";
-
+import flamingo from "@/assets/flamingo.png";
+import Image from "next/image";
 const Sidebar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchHistory] = useState([
@@ -18,10 +19,10 @@ const Sidebar = () => {
   ]);
 
   return (
-    <div className="w-64 bg-gray-900 text-white h-screen p-4 flex flex-col">
-      <div className="flex items-center mb-6">
-        <FileText className="text-blue-500 mr-2" />
-        <span className="text-xl font-bold">TalkPDF</span>
+    <div className="w-60 bg-red-400 text-white h-screen p-4 flex flex-col">
+      <div className="flex items-center mb-6 gap-3">
+        <Image src={flamingo} height={40} width={40} alt="img" />
+        <span className="text-2xl text-gray-950 font-bold  ">Flamingo</span>
       </div>
 
       <button className="bg-blue-500 text-white py-2 px-4 rounded-md mb-4 flex items-center justify-center">
@@ -43,19 +44,19 @@ const Sidebar = () => {
         />
       </div>
 
-      <div className="mb-4 flex items-center text-gray-400">
+      <div className="mb-4 flex items-center text-gray-700">
         <ChevronLeft size={18} />
         <FileText size={18} className="mx-2" />
         <span className="text-sm">Product Requir...</span>
       </div>
 
       <div className="flex-grow overflow-y-auto">
-        <h3 className="text-gray-400 text-sm mb-2">Search History</h3>
-        <h4 className="text-gray-500 text-xs mb-2">Today</h4>
+        <h3 className="text-gray-700 text-sm mb-2">Search History</h3>
+        <h4 className="text-gray-800 text-xs mb-2">Today</h4>
         <ul>
           {searchHistory.map((query, index) => (
             <li key={index} className="mb-2 flex items-center text-sm">
-              <Search size={14} className="mr-2 text-gray-400" />
+              <Search size={14} className="mr-2 text-gray-700" />
               {query}
             </li>
           ))}
